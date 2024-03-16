@@ -66,7 +66,6 @@ public class ex3 {
       System.out.println("4 - Alterar dados");
       System.out.println("5 - Remoção");
       System.out.println("0 - Sair");
-      System.out.print("Escolha uma opção: ");
   }
 
   private void cadastrarProduto(Scanner sc, ArrayList<Produto> listaProdutos) {
