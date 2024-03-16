@@ -37,6 +37,7 @@ public class av1 {
         do {
             menu();
             op = sc.nextInt();
+            sc.nextLine();
             switch (op) {
                 case 1:
                     adicionarTarefa(sc, filaTarefas);
@@ -66,7 +67,6 @@ public class av1 {
     }
 
     private void adicionarTarefa(Scanner sc, Queue<Tarefa> filaTarefas) {
-        sc.nextLine().trim(); 
         System.out.print("Digite a descrição da tarefa: ");
         String descricao = sc.nextLine().trim();
         if (!descricao.isEmpty()) {
