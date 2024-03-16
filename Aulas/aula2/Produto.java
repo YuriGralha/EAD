@@ -28,5 +28,9 @@ public class Produto {
             this.segmento = segmento;
         }
   
+        @Override
+        public String toString() {
+            return "Nome: " + nome + ", Segmento: " + segmento;
+        }
     }
   

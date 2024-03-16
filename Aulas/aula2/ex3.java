@@ -31,7 +31,6 @@ public class ex3 {
           menu();
           op = sc.nextInt();
           sc.nextLine(); 
-
           switch (op) {
               case 1:
                   cadastrarProduto(sc, listaProdutos);
@@ -120,15 +119,39 @@ private void alterarProduto(Scanner sc, ArrayList<Produto> listaProdutos) {
     boolean encontrado = false;
     for (Produto produto : listaProdutos) {
         if (produto.getNome().equals(nomeProduto)) {
-            System.out.print("Digite o novo nome do produto: ");
-            String novoNome = sc.nextLine().trim();
-            while (novoNome.isEmpty()) {
-                System.out.println("O nome do produto não pode estar vazio.");
-                System.out.print("Digite o novo nome do produto: ");
-                novoNome = sc.nextLine().trim();
+            System.out.println("Produto encontrado. O que você deseja alterar?");
+            System.out.println("1 - Nome");
+            System.out.println("2 - Segmento");
+            int opcao = sc.nextInt();
+            sc.nextLine(); 
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite o novo nome do produto: ");
+                    String novoNome = sc.nextLine().trim();
+                    while (novoNome.isEmpty()) {
+                        System.out.println("O nome do produto não pode estar vazio.");
+                        System.out.print("Digite o novo nome do produto: ");
+                        novoNome = sc.nextLine().trim();
+                    }
+                    produto.setNome(novoNome);
+                    System.out.println("Nome do produto alterado com sucesso.");
+                    break;
+                case 2:
+                    System.out.print("Digite o novo segmento do produto: ");
+                    String novoSegmento = sc.nextLine().trim();
+                    while (novoSegmento.isEmpty()) {
+                        System.out.println("O segmento do produto não pode estar vazio.");
+                        System.out.print("Digite o novo segmento do produto: ");
+                        novoSegmento = sc.nextLine().trim();
+                    }
+                    produto.setSegmento(novoSegmento);
+                    System.out.println("Segmento do produto alterado com sucesso.");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
             }
-            produto.setNome(novoNome);
-            System.out.println("Produto alterado com sucesso.");
             encontrado = true;
             break;
         }

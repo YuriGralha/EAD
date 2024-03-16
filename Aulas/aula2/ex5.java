@@ -37,7 +37,6 @@ public class ex5 {
             menu();
             op = sc.nextInt();
             sc.nextLine();
-
             switch (op) {
                 case 1:
                     cadastrarAluno(sc);

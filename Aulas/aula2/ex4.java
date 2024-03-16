@@ -16,13 +16,11 @@ public class ex4 {
 	public void start() {
         LinkedList<AlunoCadastrado> listaAlunos = new LinkedList<>();
         Scanner sc = new Scanner(System.in);
-
         int op;
         do {
             menu();
             op = sc.nextInt();
             sc.nextLine(); 
-
 			switch (op) {
                 case 1:
                     cadastrarAluno(sc, listaAlunos);

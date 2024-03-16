@@ -21,13 +21,13 @@ public class ex2 {
 
     public void start(){
         Scanner sc = new Scanner(System.in);
-
         String[] vetor = new String[15];
         int qt = 0;
         int op;
         do {
             menu();
             op = sc.nextInt();
+            sc.nextLine();
             switch (op) {
                 case 1:
                     qt = Cadastrar(sc, vetor, qt);
